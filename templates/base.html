@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,11 +8,33 @@
         <title>BT Real Estate</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href=" {% static 'css/all.css' %}">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href=" {% static 'css/bootstrap.css' %}">
+        <!-- Custom -->
+        <link rel="stylesheet" href=" {% static 'css/style.css' %}">
+        <!-- Lightbox -->
+        <link rel="stylesheet" href=" {% static 'css/lightbox.min.css' %}">
     </head>
     <body>
+
+       <!-- Top Bar -->
+       {% include  'partials/_topbar.html'  %}
+
+       <!-- Nav Bar -->
+       {% include  'partials/_navbar.html'  %}
+       
         {% block content %} {% endblock  %} 
-        
+
+       <!-- Footer -->
+       {% include  'partials/_footer.html'  %}
+
+
         <script src="" async defer></script>
+        <script src=" {% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script src=" {% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src=" {% static 'js/lightbox.min.js' %}"></script>
+        <script src=" {% static 'js/main.js' %}"></script>
     </body>
 </html>
